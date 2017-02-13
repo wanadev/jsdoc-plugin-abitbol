@@ -5,8 +5,7 @@ exports.handlers = {
 
         if (className) {
             e.source = e.source.replace(/(.*?\s?=\s?.*?\.\$extend\(\X*?)(\{)/, "$1/** @lends sticky.StickyStructure */$2");
-            e.source = e.source.replace(/@member\s+(.*?)\s*$/gm, "@member " + className + "#$1");
+            e.source = e.source.replace(/@(member|event|fires|emits)\s+([a-zA-Z\._-]*?)\s*$/gm, "@$1 " + className + "#$2");
         }
     },
 };
-
