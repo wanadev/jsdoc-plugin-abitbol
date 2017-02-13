@@ -4,8 +4,10 @@ exports.handlers = {
         var className = classMatch ? classMatch[1] : null;
 
         if (className) {
-            e.source = e.source.replace(/(.*?\s?=\s?.*?\.\$extend\(\X*?)(\{)/, "$1/** @lends sticky.StickyStructure */$2");
+            e.source = e.source.replace(/(.*?\s?=\s?.*?\.\$extend\(\X*?)(\{)/, "$1/** @lends " + className + " */$2");
             e.source = e.source.replace(/@(member|event|fires|emits)\s+([a-zA-Z\._-]*?)\s*$/gm, "@$1 " + className + "#$2");
         }
+
+        console.log(e.source);
     },
 };
