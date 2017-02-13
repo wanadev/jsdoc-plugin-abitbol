@@ -88,5 +88,6 @@ module.exports = {
 ```
 
 ## Changelog
+- **0.1.2**: Supports event tags
 - **0.1.1**: Updates documentation
 - **0.1.0**: Initial release
