@@ -20,15 +20,27 @@ Add an entry in the `plugins` list of your `jsdoc` config file :
 
 ## Usage
 
+Use the following syntax for a class :
+
 ```js
+/**
+* My class.
+*
+* @class mymodule.MyClass
+* @extends Class
+* @param params {Object} The parameters.
+* @emits myEvent
+*/
 const MyClass = Class.$extend({
+
     /**
-     * My class.
+     * My event.
      *
-     * @class namespace.MyClass
-     * @extends Class
-     * @param params {Object} The parameters.
+     * @event myEvent
+     * @type {object}
+     * @property {boolean} The property.
      */
+
     __init__(params) {
         // ...
     },
@@ -56,5 +68,21 @@ const MyClass = Class.$extend({
     method1(params) {
         // ...
     },
+}
+```
+
+For a module :
+
+```js
+/**
+ * My module.
+ * @module mymodule
+ */
+module.exports = {
+    /**
+     * My class instance.
+     * @type mymodule.MyClass
+     */
+     myClass: null,
 }
 ```
