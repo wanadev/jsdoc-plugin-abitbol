@@ -2,6 +2,22 @@
 
 A jsdoc plugin which simplifies [abitbol](https://github.com/wanadev/abitbol) classes documentation.
 
+## Installation
+
+Install `jsdoc-plugin-abitbol`
+
+```shell
+npm install --save-dev jsdoc-plugin-abitbol
+```
+
+Add an entry in the `plugins` list of your `jsdoc` config file :
+
+```json
+{
+    "plugins": ["node_modules/jsdoc-plugin-abitbol"]
+}
+```
+
 ## Usage
 
 ```js
@@ -40,5 +56,5 @@ const MyClass = Class.$extend({
     method1(params) {
         // ...
     },
-
+}
 ```
