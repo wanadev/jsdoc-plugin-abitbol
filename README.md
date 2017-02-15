@@ -1,6 +1,7 @@
 # jsdoc-plugin-abitbol
+[![npm version](https://badge.fury.io/js/jsdoc-plugin-abitbol.svg)](https://www.npmjs.com/package/jsdoc-plugin-abitbol)
 
-A jsdoc plugin which simplifies [abitbol](https://github.com/wanadev/abitbol) classes documentation.
+A [jsdoc](https://github.com/jsdoc3/jsdoc) plugin which simplifies [abitbol](https://github.com/wanadev/abitbol) classes documentation.
 
 ## Installation
 
@@ -20,13 +21,13 @@ Add an entry in the `plugins` list of your `jsdoc` config file :
 
 ## Usage
 
-Use the following syntax for a class :
+### Classes
 
 ```js
 /**
 * My class.
 *
-* @class mymodule.MyClass
+* @class mynamespace.mymodule.MyClass
 * @extends Class
 * @param params {Object} The parameters.
 * @emits myEvent
@@ -71,20 +72,40 @@ const MyClass = Class.$extend({
 }
 ```
 
-For a module :
+### Modules
+
+Direct export :
 
 ```js
 /**
  * My module.
- * @module mymodule
+ * @module mynamespace.mymodule
  */
 module.exports = {
     /**
      * My class instance.
-     * @type mymodule.MyClass
+     * @type mynamespace.mymodule.MyClass
      */
      myClass: null,
 }
+```
+
+For indirect export, use `@exports` instead of `@module` :
+
+```js
+/**
+ * My module.
+ * @exports mynamespace.mymodule
+ */
+const myModule = {
+    /**
+     * My class instance.
+     * @type mynamespace.mymodule.MyClass
+     */
+     myClass: null,
+}
+
+module.exports = myModule;
 ```
 
 ## Changelog
