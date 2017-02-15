@@ -49,8 +49,7 @@ const MyClass = Class.$extend({
     /**
      * The name.
      *
-     * @member name
-     * @type {String}
+     * @member {String} name
      * @default null
      */
     getName() {
@@ -79,11 +78,13 @@ Direct export :
 ```js
 /**
  * My module.
+ *
  * @module mynamespace.mymodule
  */
 module.exports = {
     /**
      * My class instance.
+     *
      * @type mynamespace.mymodule.MyClass
      */
      myClass: null,
@@ -95,11 +96,13 @@ For indirect export, use `@exports` instead of `@module` :
 ```js
 /**
  * My module.
+ *
  * @exports mynamespace.mymodule
  */
 const myModule = {
     /**
      * My class instance.
+     *
      * @type mynamespace.mymodule.MyClass
      */
      myClass: null,
