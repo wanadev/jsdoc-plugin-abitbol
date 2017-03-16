@@ -79,7 +79,7 @@ Direct export :
 /**
  * My module.
  *
- * @module mynamespace.mymodule
+ * @exports mynamespace.mymodule
  */
 module.exports = {
     /**
@@ -91,7 +91,7 @@ module.exports = {
 }
 ```
 
-For indirect export, use `@exports` instead of `@module` :
+For indirect export :
 
 ```js
 /**
