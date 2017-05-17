@@ -1,4 +1,6 @@
 # jsdoc-plugin-abitbol
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/wanadev/jsdoc-plugin-abitbol.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/jsdoc-plugin-abitbol.svg)](https://www.npmjs.com/package/jsdoc-plugin-abitbol)
 
 A [jsdoc](https://github.com/jsdoc3/jsdoc) plugin which simplifies [abitbol](https://github.com/wanadev/abitbol) classes documentation.
